@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- <title>음성 인식 및 대화 시스템</title> -->
+    <title>Voice Recognition & Chat System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
 
-<head>
-    <title>음성 인식 및 대화 시스템</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-</head>
-
-<body>
+  <body>
     <div id="header">
-        <h1>음성 인식 및 대화 시스템</h1>
-        <nav>
-            <ul>
-                <li><a href="/love" value="Love">연애</a></li>
-                <li><a href="/Career" value="Career">진로(취업,학업)</a></li>
-                <li><a href="/Health" value="Health">건강(정신)</a></li>
-                <li><a href="/Finance" value="Finance">재정(경제적 문제) </a></li>
-            </ul>
-        </nav>
+      <h1>Voice Recognition & Chat System</h1>
+      <nav>
+        <ul>
+          <li><a href="/love">Love</a></li>
+          <li><a href="/Career">Career</a></li>
+          <li><a href="/Health">Health</a></li>
+          <li><a href="/Finance">Finance</a></li>
+        </ul>
+      </nav>
     </div>
     <div id="content">
-        <p>아래 버튼을 누르면 음성 인식이 시작됩니다.</p>
+      <!-- <p>아래 버튼을 누르면 음성 인식이 시작됩니다.</p>
         <button id="record-btn">음성 입력</button>
         <p>인식된 텍스트: <span id="result"></span></p>
-        <p>OpenAI GPT-3의 응답: <span id="response"></span></p>
+        <p>OpenAI GPT-3의 응답: <span id="response"></span></p> -->
+      <p>Press the button below to start.</p>
+      <button id="record-btn">Start Chat</button>
+      <p>Recognized Text <span id="result"></span></p>
+      <p>OpenAI GPT-3's response: <span id="response"></span></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-
+  </body>
 </html>
