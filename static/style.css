@@ -48,6 +48,12 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+img {
+  width: 30%;
+  display: flex;
+  margin: auto;
+}
+
 h1 {
   font-size: 36px;
   margin-top: 0;
