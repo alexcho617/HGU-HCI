@@ -73,7 +73,6 @@ def play_audio(text):
     play(speak)
 # Flask 라우트 및 뷰 함수
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -106,22 +105,29 @@ def set_category():
 
 @app.route('/love')
 def love():
-    return render_template('love.html')
-
+    prompt = os.environ.get('love_sentence')
+    response = get_openai_response(prompt)
+    return render_template('love.html', response=response)
 
 @app.route('/Career')
 def career():
-    return render_template('Career.html')
+    prompt = os.environ.get('career_sentence')
+    response = get_openai_response(prompt)
+    return render_template('Career.html', response=response)
 
 
 @app.route('/Health')
 def health():
-    return render_template('Health.html')
+    prompt = os.environ.get('health_sentence')
+    response = get_openai_response(prompt)
+    return render_template('Health.html', response=response)
 
 
 @app.route('/Finance')
 def finance():
-    return render_template('Finance.html')
+    prompt = os.environ.get('finance_sentence')
+    response = get_openai_response(prompt)
+    return render_template('Finance.html', response=response)
 
 
 if __name__ == '__main__':
