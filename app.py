@@ -81,7 +81,7 @@ def index():
 @app.route('/get_openai_response', methods=['POST'])
 def get_response():
     if request.method == 'POST':
-        text = '너는 연애전문가야 구체적인 해결책을 제시해줘' + request.form['text']
+        text = request.form['text']
         response = get_openai_response(text)
         play_audio(response)
         return response
