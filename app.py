@@ -66,6 +66,7 @@ def recognize_speech():
 
 def play_audio(text):
     tts = gTTS(text=text, lang='ko')
+    # tts.save("test1.mp3")
     audio = BytesIO()
     tts.write_to_fp(audio)
     audio.seek(0)
