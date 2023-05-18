@@ -2,7 +2,7 @@
 > A.I. counseling service based on chatGPT API
 
 
-<img width="1421" alt="스크린샷 2023-05-18 오전 10 29 37" src="https://github.com/alexcho617/HGU-HCI/assets/91535597/4ba30041-b52d-4bc8-bb51-50bacd3adf22">
+<img width="1440" alt="image" src="https://github.com/alexcho617/HGU-HCI/assets/117165485/03a78654-3d57-4644-9548-2b0bba8eabd5">
 
 ## Backgrounds
 1. Stages of Life & Different Problems
