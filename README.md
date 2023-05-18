@@ -1,6 +1,8 @@
 # HGU-HCI
 > A.I. counseling service based on chatGPT API
-![c1](https://github.com/alexcho617/HGU-HCI/assets/91535597/8027cf4e-a91b-401f-b4eb-2bc9222e3fc6)
+
+
+<img width="1421" alt="스크린샷 2023-05-18 오전 10 29 37" src="https://github.com/alexcho617/HGU-HCI/assets/91535597/4ba30041-b52d-4bc8-bb51-50bacd3adf22">
 
 ## Backgrounds
 1. Stages of Life & Different Problems
