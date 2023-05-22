@@ -46,9 +46,30 @@ def get_openai_response(prompt, print_output=False):
 # 음성 입력을 텍스트로 변환하는 함수
 
 
+# def recognize_speech():
+#     r = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         # Send Ready signal to html
+#         send_ready()
+#         print("음성을 입력하세요.")
+#         audio = r.listen(source)
+#     try:
+#         text = r.recognize_google(audio, language='ko-KR')
+        
+#         print("인식된 텍스트: " + text)
+#         return text
+#     except sr.UnknownValueError:
+#         print("음성을 인식할 수 없습니다.")
+#         return None
+#     except sr.RequestError as e:
+#         print("구글 음성 인식 API에 접근할 수 없습니다: {0}".format(e))
+#         return None
+
 def recognize_speech():
     r = sr.Recognizer()
     with sr.Microphone() as source:
+        # Send Ready signal to html
+        send_ready()
         print("음성을 입력하세요.")
         audio = r.listen(source)
     try:
@@ -62,6 +83,7 @@ def recognize_speech():
     except sr.RequestError as e:
         print("구글 음성 인식 API에 접근할 수 없습니다: {0}".format(e))
         return None
+
 
 
 def play_audio(text):
@@ -86,6 +108,12 @@ def get_response():
         response = get_openai_response(text)
         play_audio(response)
         return response
+
+
+@app.route('/send_ready', methods=['POST'])
+def send_ready():
+    print("is ready called")
+    return "ready"
 
 
 @app.route('/speech_to_text', methods=['GET'])

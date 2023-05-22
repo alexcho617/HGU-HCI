@@ -11,7 +11,7 @@
   <body>
     <div id="header">
       <h1>Voice Recognition & Chat System</h1>
-      <nav>
+      <nav >
         <ul>
           <!-- <li><a href="#">연애</a></li>
           <li><a href="#">진로(취업,학업)</a></li>
@@ -25,8 +25,10 @@
       </nav>
     </div>
 
+
     <div id="content">
       <image>
+        
         <img src="{{ url_for('static', filename='images/image.gif') }}" />
       </image>
       <!-- <p>아래 버튼을 누르면 음성 인식이 시작됩니다.</p>
@@ -43,10 +45,11 @@
       >
         <p>Press the button below to start.</p>
         <button id="record-btn">Start Chat</button>
+
         <!-- <button id="stop-btn">Stop Chat</button> -->
       </div>
       <p style="font-size: 20px; font-weight: bold">
-        Recognized Text
+        Recognized Text:
        <span id="result" style="border: 2px solid #0077c2; padding: 2px;">
       </p>
       <p style="font-size: 20px; font-weight: bold">
