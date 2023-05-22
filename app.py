@@ -52,8 +52,8 @@ def recognize_speech():
         print("음성을 입력하세요.")
         audio = r.listen(source)
     try:
-        text = r.recognize_google(audio, language='ko-KR')
-        
+        text = r.recognize_google(audio, language='en-US')
+        # text = r.recognize_google(audio, language='ko-KR')
         print("인식된 텍스트: " + text)
         return text
     except sr.UnknownValueError:
@@ -65,7 +65,8 @@ def recognize_speech():
 
 
 def play_audio(text):
-    tts = gTTS(text=text, lang='ko')
+    # tts = gTTS(text=text, lang='ko')
+    tts = gTTS(text=text, lang='en')
     # tts.save("test1.mp3")
     audio = BytesIO()
     tts.write_to_fp(audio)
