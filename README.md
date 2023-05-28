@@ -26,8 +26,3 @@
 > Help
 > > assist in making sure our clients have the necessary knowledge and skills to combat their issues of the day while empathizing with them
 
-## Stacks
-나중에 추가
-
-
-## 
